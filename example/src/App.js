@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-import ExampleComponent from 'react-gradient-progress'
+import {CircleProgress} from 'react-gradient-progress'
 
-export default class App extends Component {
+export default class App extends React.Component {
   render () {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <CircleProgress percentage={50} />
       </div>
     )
   }

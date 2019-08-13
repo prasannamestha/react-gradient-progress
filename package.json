@@ -1,7 +1,7 @@
 {
   "name": "react-gradient-progress",
   "version": "1.0.0",
-  "description": "Simple and light circular progressbar with gradientprogressbar with gradient",
+  "description": "Simple and light circular progressbar in react with a gradient",
   "author": "mesthabro",
   "license": "MIT",
   "repository": "mesthabro/react-gradient-progress",
@@ -23,8 +23,8 @@
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
-    "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
     "@svgr/rollup": "^2.4.1",
