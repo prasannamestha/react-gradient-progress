@@ -1,6 +1,6 @@
 # React Gradient Progress
 
-> Simple and light circular progressbar with gradientprogressbar with gradient
+> Simple and light circular progressbar with gradient
 
 [![NPM](https://img.shields.io/npm/v/react-gradient-progress.svg)](https://www.npmjs.com/package/react-gradient-progress) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 

@@ -1,7 +1,7 @@
-import ExampleComponent from './'
+import {CircleProgress} from './'
 
-describe('ExampleComponent', () => {
+describe('CircleProgress', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(CircleProgress).toBeTruthy()
   })
 })
