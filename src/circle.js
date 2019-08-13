@@ -19,6 +19,7 @@ const CircleProgress = ({
   const R = (width / 2) - (strokeWidth * 2)
   let circumference = 2 * PI * R
   let offset = circumference - percentage / 100 * circumference
+  let gradientId = `${primaryColor[0]}${primaryColor[1]}`.replace(/#/g, '')
   return (
     <div
       className={styles.reactGradientProgress}
@@ -47,7 +48,13 @@ const CircleProgress = ({
         version='1.1'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <linearGradient id='linear' x1='0%' y1='0%' x2='100%' y2='0%'>
+        <linearGradient
+          id={gradientId}
+          x1='0%'
+          y1='0%'
+          x2='100%'
+          y2='100%'
+        >
           <stop offset='0%' stopColor={primaryColor[0]} />
           <stop offset='100%' stopColor={primaryColor[1]} />
         </linearGradient>
@@ -67,7 +74,7 @@ const CircleProgress = ({
           r={R}
           cx={width / 2}
           cy={width / 2}
-          stroke='url(#linear)'
+          stroke={`url(#${gradientId})`}
           strokeLinecap='round'
           strokeDasharray={`${circumference} ${circumference}`}
           strokeDashoffset={offset}
