@@ -4,9 +4,9 @@
   position: relative;
 }
 .reactGradientProgressPercentage {
+  position: absolute;
   height:100%;
   width: 100%;
-  position: absolute;
   margin: 0px auto;
 }
 
@@ -19,10 +19,6 @@
   align-content: center;
   flex-direction: column;
   text-align: center;
-}
-
-.progressCircle {
-  position: absolute;
 }
 
 .progressCircleBar {
