@@ -4,12 +4,14 @@
   position: relative;
 }
 .reactGradientProgressPercentage {
+  position: absolute;
   height:100%;
   width: 100%;
   margin: 0px auto;
 }
 
 .reactGradientProgressPercentageSpan {
+  position: absolute;
   height:100%;
   width: 100%;
   display: flex;
