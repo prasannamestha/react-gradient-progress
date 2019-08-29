@@ -13,6 +13,7 @@ const CircleProgress = ({
   primaryColor,
   secondaryColor,
   fill,
+  hidePercentageText
 }) => {
   const PI = 3.14
 
@@ -28,18 +29,21 @@ const CircleProgress = ({
         width: `${width}px`,
       }}
     >
-      <div id={styles.reactGradientProgressPercentage}>
-        <span
-          className={styles.reactGradientProgressPercentageSpan}
-          style={{
-            fontSize,
-            fontFamily,
-            color: fontColor,
-          }}
-        >
-          {percentage}%
+      {!hidePercentageText ?
+        <div id={styles.reactGradientProgressPercentage}>
+          <span
+            className={styles.reactGradientProgressPercentageSpan}
+            style={{
+              fontSize,
+              fontFamily,
+              color: fontColor,
+            }}
+          >
+            {percentage}%
         </span>
-      </div>
+        </div>
+        : null
+      }
 
       <svg
         className={styles.progressCircle}
@@ -94,6 +98,7 @@ CircleProgress.propTypes = {
   primaryColor: PropTypes.array,
   secondaryColor: PropTypes.string,
   fill: PropTypes.string,
+  hideText: PropTypes.bool
 }
 
 CircleProgress.defaultProps = {
@@ -104,7 +109,7 @@ CircleProgress.defaultProps = {
   fontFamily: 'inherit',
   primaryColor: ['#00BBFF', '#92d7f1'],
   secondaryColor: 'transparent',
-  fill: 'transparent',
+  fill: 'transparent'
 }
 
 export default CircleProgress
