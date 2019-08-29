@@ -98,7 +98,7 @@ CircleProgress.propTypes = {
   primaryColor: PropTypes.array,
   secondaryColor: PropTypes.string,
   fill: PropTypes.string,
-  hideText: PropTypes.bool
+  hidePercentageText: PropTypes.bool
 }
 
 CircleProgress.defaultProps = {
