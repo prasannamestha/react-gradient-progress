@@ -36,6 +36,13 @@ import {CircleProgress} from 'react-gradient-progress'
 | `secondaryColor` | The color of the uncovered percentage. Default: `'transparent'`.                                                                                              |
 | `fill`  | Color to fill in the progressbar. Default: `'transparent'`.                                                                                                                                                         |
 
+## Read more
+[https://medium.com/better-programming/build-beautiful-gradient-enabled-circular-progress-bars-in-react-d0a746deed0](https://medium.com/better-programming/build-beautiful-gradient-enabled-circular-progress-bars-in-react-d0a746deed0)
+
+## Buy me a coffee if you like this repo
+[![Send me a tip](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png)](https://www.buymeacoffee.com/prasanna)
+
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
