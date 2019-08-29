@@ -46,7 +46,6 @@ const CircleProgress = ({
       }
 
       <svg
-        className={styles.progressCircle}
         width='100%'
         height='100%'
         version='1.1'
@@ -104,7 +103,7 @@ CircleProgress.propTypes = {
 CircleProgress.defaultProps = {
   width: 200,
   strokeWidth: 5,
-  fontSize: '30px',
+  fontSize: 'inherit',
   fontColor: 'inherit',
   fontFamily: 'inherit',
   primaryColor: ['#00BBFF', '#92d7f1'],

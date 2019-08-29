@@ -21,10 +21,6 @@
   text-align: center;
 }
 
-.progressCircle {
- 
-}
-
 .progressCircleBar {
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
