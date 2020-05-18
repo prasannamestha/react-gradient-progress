@@ -13,7 +13,8 @@ const CircleProgress = ({
   primaryColor,
   secondaryColor,
   fill,
-  hidePercentageText
+  hidePercentageText,
+  strokeLinecap,
 }) => {
   const PI = 3.14
 
@@ -40,7 +41,7 @@ const CircleProgress = ({
             }}
           >
             {percentage}%
-        </span>
+          </span>
         </div>
         : null
       }
@@ -58,8 +59,8 @@ const CircleProgress = ({
           x2='100%'
           y2='100%'
         >
-          <stop offset='0%' stopColor={primaryColor[0]} />
-          <stop offset='100%' stopColor={primaryColor[1]} />
+          <stop offset='0%' stopColor={primaryColor[0]}/>
+          <stop offset='100%' stopColor={primaryColor[1]}/>
         </linearGradient>
         <circle
           strokeWidth={strokeWidth}
@@ -78,7 +79,7 @@ const CircleProgress = ({
           cx={width / 2}
           cy={width / 2}
           stroke={`url(#${gradientId})`}
-          strokeLinecap='round'
+          strokeLinecap={strokeLinecap}
           strokeDasharray={`${circumference} ${circumference}`}
           strokeDashoffset={offset}
         />
@@ -91,24 +92,26 @@ CircleProgress.propTypes = {
   percentage: PropTypes.number.isRequired,
   width: PropTypes.number,
   strokeWidth: PropTypes.number,
+  strokeLinecap: PropTypes.oneOf(['round', 'square', 'butt']),
   fontSize: PropTypes.string,
   fontColor: PropTypes.string,
   fontFamily: PropTypes.string,
   primaryColor: PropTypes.array,
   secondaryColor: PropTypes.string,
   fill: PropTypes.string,
-  hidePercentageText: PropTypes.bool
+  hidePercentageText: PropTypes.bool,
 }
 
 CircleProgress.defaultProps = {
   width: 200,
   strokeWidth: 5,
+  strokeLinecap: 'round',
   fontSize: 'inherit',
   fontColor: 'inherit',
   fontFamily: 'inherit',
   primaryColor: ['#00BBFF', '#92d7f1'],
   secondaryColor: 'transparent',
-  fill: 'transparent'
+  fill: 'transparent',
 }
 
 export default CircleProgress
