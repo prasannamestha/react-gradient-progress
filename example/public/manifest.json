@@ -1,8 +1,0 @@
-{
-  "short_name": "react-gradient-progress",
-  "name": "react-gradient-progress",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}

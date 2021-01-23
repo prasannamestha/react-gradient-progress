@@ -1,9 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './circle.css'
+import './circle.css'
 
-const CircleProgress = ({
+const CircleContainer = ({ children, style }) => <div className="react-super-progressbar__base" style={style}>{children}</div>
+
+const PercentageContainer = ({ children }) => <div className="react-super-progressbar__percentage-container">{children}</div>
+
+const StyledCircle = ({ children, ...props }) => <circle className="react-super-progressbar__styled-circle" {...props}>{children}</circle>
+
+const GradientCircleProgressbar = ({
   percentage,
   width,
   strokeWidth,
@@ -17,23 +23,23 @@ const CircleProgress = ({
   strokeLinecap,
 }) => {
   const PI = 3.14
-
   const R = (width / 2) - (strokeWidth * 2)
+
   let circumference = 2 * PI * R
   let offset = circumference - percentage / 100 * circumference
   let gradientId = `${primaryColor[0]}${primaryColor[1]}`.replace(/#/g, '')
+
   return (
-    <div
-      className={styles.reactGradientProgress}
+    <CircleContainer
       style={{
         height: `${width}px`,
         width: `${width}px`,
       }}
     >
       {!hidePercentageText ?
-        <div id={styles.reactGradientProgressPercentage}>
+        <PercentageContainer>
           <span
-            className={styles.reactGradientProgressPercentageSpan}
+            className="react-super-progressbars__percentage"
             style={{
               fontSize,
               fontFamily,
@@ -42,7 +48,7 @@ const CircleProgress = ({
           >
             {percentage}%
           </span>
-        </div>
+        </PercentageContainer>
         : null
       }
 
@@ -71,8 +77,7 @@ const CircleProgress = ({
           stroke={secondaryColor}
           strokeDasharray={`${circumference} ${circumference}`}
         />
-        <circle
-          className={styles.progressCircleBar}
+        <StyledCircle
           strokeWidth={strokeWidth}
           fill={fill}
           r={R}
@@ -84,11 +89,11 @@ const CircleProgress = ({
           strokeDashoffset={offset}
         />
       </svg>
-    </div>
+    </CircleContainer>
   )
 }
 
-CircleProgress.propTypes = {
+GradientCircleProgressbar.propTypes = {
   percentage: PropTypes.number.isRequired,
   width: PropTypes.number,
   strokeWidth: PropTypes.number,
@@ -102,7 +107,7 @@ CircleProgress.propTypes = {
   hidePercentageText: PropTypes.bool,
 }
 
-CircleProgress.defaultProps = {
+GradientCircleProgressbar.defaultProps = {
   width: 200,
   strokeWidth: 5,
   strokeLinecap: 'round',
@@ -114,4 +119,4 @@ CircleProgress.defaultProps = {
   fill: 'transparent',
 }
 
-export default CircleProgress
+export default GradientCircleProgressbar
