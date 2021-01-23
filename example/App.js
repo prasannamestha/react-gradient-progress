@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { CircleProgress } from '../src/index'
+import { CircleProgress } from '../src/index.js'
 
 export default class App extends React.Component {
   render () {

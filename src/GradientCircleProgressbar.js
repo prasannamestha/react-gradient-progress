@@ -1,13 +1,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from '@emotion/styled'
 
-import './circle.css'
+const CircleContainer = styled.div`
+  display: inline-block;
+  border-radius: 100%;
+  position: relative;`
 
-const CircleContainer = ({ children, style }) => <div className="react-super-progressbar__base" style={style}>{children}</div>
+const PercentageContainer = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center,`
 
-const PercentageContainer = ({ children }) => <div className="react-super-progressbar__percentage-container">{children}</div>
-
-const StyledCircle = ({ children, ...props }) => <circle className="react-super-progressbar__styled-circle" {...props}>{children}</circle>
+const StyledCircle = styled.circle`
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;`
+// const CircleContainer = ({ children, style }) => <div className="react-super-progressbar__base" style={style}>{children}</div>
+// const PercentageContainer = ({ children }) => <div className="react-super-progressbar__percentage-container">{children}</div>
+// const StyledCircle = ({ children, ...props }) => <circle className="react-super-progressbar__styled-circle" {...props}>{children}</circle>
 
 const GradientCircleProgressbar = ({
   percentage,
@@ -31,13 +48,14 @@ const GradientCircleProgressbar = ({
 
   return (
     <CircleContainer
+      className="react-super-progressbar__base"
       style={{
         height: `${width}px`,
         width: `${width}px`,
       }}
     >
       {!hidePercentageText ?
-        <PercentageContainer>
+        <PercentageContainer className="react-super-progressbar__percentage-container">
           <span
             className="react-super-progressbars__percentage"
             style={{

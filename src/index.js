@@ -1,1 +1,1 @@
-export { default as CircleProgress } from './GradientCircleProgressbar'
+export { default as CircleProgress } from './GradientCircleProgressbar.js'
