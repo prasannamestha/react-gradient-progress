@@ -2,22 +2,22 @@
 
 > Simple and light gradient-enabled circular progressbar for reactjs/nextjs
 
-![React Super Progressbar](https://miro.medium.com/max/875/1*6eFjvxycuyCzO-jui0d6Dw.png)
+![React Gradient Progress](https://miro.medium.com/max/875/1*6eFjvxycuyCzO-jui0d6Dw.png)
 
-[![NPM](https://img.shields.io/npm/v/react-super-progressbar.svg)](https://www.npmjs.com/package/react-super-progressbar) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-gradient-progress.svg)](https://www.npmjs.com/package/react-gradient-progress) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Installation
 
 Using npm
 
 ```bash
-npm i -s react-super-progressbar
+npm i -s react-gradient-progress
 ```
 
 ## Basic Usage
 
 ```javascript
-import {CircleProgress} from 'react-super-progressbar'
+import {CircleProgress} from 'react-gradient-progress'
 
 <CircleProgress percentage={75} strokeWidth={8} />
 ```
