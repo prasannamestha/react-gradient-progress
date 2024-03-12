@@ -20,7 +20,6 @@ const PercentageContainer = styled.div`
   text-align: center,`
 
 const StyledCircle = styled.circle`
-  transform: rotate(-90deg);
   transform-origin: 50% 50%;`
 // const CircleContainer = ({ children, style }) => <div className="react-super-progressbar__base" style={style}>{children}</div>
 // const PercentageContainer = ({ children }) => <div className="react-super-progressbar__percentage-container">{children}</div>
@@ -105,6 +104,7 @@ const GradientCircleProgressbar = ({
           strokeLinecap={strokeLinecap}
           strokeDasharray={`${circumference} ${circumference}`}
           strokeDashoffset={offset}
+          transform="rotate(-90, 0, 0)"
         />
       </svg>
     </CircleContainer>
